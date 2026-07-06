@@ -2,17 +2,24 @@ Hash It!
 
 Copyright (C) 2009-2011 Thilo-Alexander Ginkel.
 Copyright (C) 2011-2014 TG Byte Software GmbH.
+Copyright (C) 2024 Hash It! Contributors.
 
 Overview
 --------
 Hash It! is an application for Android, which helps you to use strong passwords for various web sites without compromising on security or busting your brain. For details about its operation, refer to:
-  http://android.ginkel.com/
+  https://github.com/ginkel/hashit
 
 Building
 --------
-The Hash It! source code comes with a Maven build script. Just run
-  mvn install
-to build an APK.
+Hash It! uses Gradle for building. The Gradle wrapper is included, so no separate installation is required.
+
+Debug build:
+  ./gradlew assembleDebug
+
+Release build:
+  ./gradlew assembleRelease
+
+The APK will be at app/build/outputs/apk/debug/app-debug.apk or app/build/outputs/apk/release/app-release-unsigned.apk.
 
 License
 -------
