@@ -19,16 +19,15 @@
  * along with Hash It!.  If not, see <http://www.gnu.org/licenses/>.
  -->
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.ginkel.hashit" android:versionCode="25"
+          android:versionCode="25"
           android:versionName="1.7.2" android:installLocation="auto">
-    <uses-sdk android:minSdkVersion="5" android:targetSdkVersion="16"/>
     <supports-screens android:smallScreens="true"
                       android:normalScreens="true" android:largeScreens="true"
                       android:anyDensity="true"/>
     <application android:icon="@drawable/icon" android:label="@string/AppName"
                  android:name=".HashItApplication" android:allowClearUserData="true"
                  android:allowBackup="true" android:theme="@android:style/Theme.Holo.Light">
-        <activity android:name=".TabbedMainActivity" android:label="@string/AppName">
+        <activity android:name=".TabbedMainActivity" android:label="@string/AppName" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
@@ -41,11 +40,11 @@
                 <data android:mimeType="text/plain"/>
             </intent-filter>
         </activity>
-        <activity android:name=".PasswordActivity" android:label="@string/AppName">
+        <activity android:name=".PasswordActivity" android:label="@string/AppName" android:exported="false">
         </activity>
-        <activity android:name=".SettingsActivity" android:label="@string/Title_Settings">
+        <activity android:name=".SettingsActivity" android:label="@string/Title_Settings" android:exported="false">
         </activity>
-        <activity android:name=".ParametersActivity" android:label="@string/Title_Parameters">
+        <activity android:name=".ParametersActivity" android:label="@string/Title_Parameters" android:exported="false">
         </activity>
         <service android:name=".util.cache.MemoryCacheServiceImpl"
                  android:label="Hash It! Master Key Cache" android:icon="@drawable/icon"

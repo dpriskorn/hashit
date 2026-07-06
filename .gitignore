@@ -4,3 +4,8 @@ out/*
 target/*
 .idea/workspace.xml
 gen/*
+.gradle/
+app/build/
+build/
+*.iml
+!.gradle/wrapper/gradle-wrapper.jar
